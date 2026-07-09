@@ -1,0 +1,22 @@
+{
+  "name": "playwright-e2e",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sivaakasapu57-source/Playwright-E2E#readme",
+  "bugs": {
+    "url": "https://github.com/sivaakasapu57-source/Playwright-E2E/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sivaakasapu57-source/Playwright-E2E.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1"
+  }
+}
