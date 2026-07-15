@@ -18,8 +18,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps chromium
-    - name: Run Playwright tests Smoke
-      run: npx playwright test --grep "@Smoke" 
+    - name: Run Playwright tests Regression
+      run: npx playwright test --grep "@Regression" 
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
