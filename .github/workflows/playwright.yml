@@ -6,6 +6,14 @@ on:
     branches: [ main, master ]
   workflow_dispatch:
     inputs:
+      inputs:
+      suite:
+        description: "Select Suite"
+        required: true
+        type: choice
+        options:
+          - smoke
+          - regression
       browser:
         description: "Select browser to run tests"
         required: true
