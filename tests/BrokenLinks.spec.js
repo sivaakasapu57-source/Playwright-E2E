@@ -1,6 +1,6 @@
 import { test } from '@playwright/test';
 
-test('Find Broken Links', async ({ page, request }) => {
+test('@Smoke @Regression Find Broken Links', async ({ page, request }) => {
 
     await page.goto('https://playwright.dev/docs/test-assertions/');
 

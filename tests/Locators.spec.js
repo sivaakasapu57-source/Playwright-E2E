@@ -1,6 +1,6 @@
 import {test,expect} from '@playwright/test'
 
-test('Locators',async({page})=>{
+test('@Regression Locators',async({page})=>{
     await page.goto('https://demoblaze.com/');
 
     const title=await page.title()

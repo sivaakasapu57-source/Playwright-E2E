@@ -1,6 +1,6 @@
 const{test,expect} = require('@playwright/test');
 
-test('Home Page Test',async({page})=>{
+test('@Smoke @Regression Home Page Test',async({page})=>{
 
     await page.goto('https://demoblaze.com/');
 

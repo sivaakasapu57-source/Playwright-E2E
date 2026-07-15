@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('Find broken links', async ({ page, request }) => {
+test('@Smoke Find broken links', async ({ page, request }) => {
 
     await page.goto('https://demo.nopcommerce.com/');
 
