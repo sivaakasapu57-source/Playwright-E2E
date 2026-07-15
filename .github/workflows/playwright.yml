@@ -1,9 +1,5 @@
 name: Regression Playwright Tests
 on:
-  push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
   workflow_dispatch:
     inputs:
       suite:
@@ -33,14 +29,14 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Install Playwright Browsers
-      run: npx playwright install --with-deps chromium
+      run: npx playwright install --with-deps ${{ inputs.browser }}
     - name: Run Playwright Tests
       run: npx playwright test --grep "@${{ inputs.suite }}" --project=${{ inputs.browser }}
-    - name: Run smoke and Regression test scenarios
-      run: npx playwright test --grep "@smoke|@Regression" --project=chromium
+    - name: Generate Allure Report
+      run: npx allure generate allure-results --clean -o allure-report  
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report
-        path: playwright-report/
+        name: allure-report
+        path: allure-report/
         retention-days: 30
